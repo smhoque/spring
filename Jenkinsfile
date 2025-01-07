@@ -1,12 +1,5 @@
 pipeline {
     agent any
-
-    environment {
-        // Set environment variables (you can customize these as needed)
-        MAVEN_HOME = "C:\Users\emdadripon\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9"
-        JAVA_HOME = "C:\Program Files\Java\jdk-21"
-    }
-
     stages {
         stage('Checkout') {
             steps {
