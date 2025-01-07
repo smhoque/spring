@@ -1,8 +1,10 @@
 pipeline {
     agent any
-      tools {
-            maven 'Maven 3'  // This matches the name you set in the global configuration
-        }
+        environment {
+              // Set environment variables (you can customize these as needed)
+              MAVEN_HOME = tool 'Maven 3'
+              JAVA_HOME = tool 'JDK 21'
+          }
     stages {
         stage('Checkout') {
             steps {
